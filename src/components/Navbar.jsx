@@ -70,7 +70,6 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
       </nav>
       {Open && windowsWidth <= 768 ? MobileMenu() : ''}
     </>
-    
   );
 };
 
