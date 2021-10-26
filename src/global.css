@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@layer components{
+    .app{
+        height: 100vh;
+    }
+    .main{
+        width: 100%;
+        height: calc(100vh - 4rem);
+        position: relative;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .main::-webkit-scrollbar{
+        display: none !important; /* Chrome, Safari , Opera*/
+    }
+    .content{
+        width: 100%;
+        height: calc(100vh - 4rem);
+        scroll-snap-align: end;
+    }
+
+    .content-text{
+        @apply p-4 md:text-4xl text-3xl font-bold uppercase z-10 md:text-left text-center text-purple-50;
+    }
+}
