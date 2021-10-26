@@ -14,15 +14,15 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
   function MobileMenu() {
     return (
       <div className="p-4 w-full z-20 bg-purple-600 text-purple-50 dark:bg-purple-50 dark:text-purple-600 items-center justify-center sticky top-16 h-session grid grid-cols-1 font-bold">
-        <HashLink to="/#About" className="p-4 text-center h-12 " onClick={ () =>{setOpen(false)}}
+        <HashLink to="/#About" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
           ABOUT
         </HashLink>
-        <HashLink to="/#Timeline" className="p-4 text-center h-12" onClick={ () =>{setOpen(false)}}
+        <HashLink to="/#Timeline" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
           TIMELINE
         </HashLink>
-        <HashLink to="/#Project" className="p-4 text-center h-12" onClick={ () =>{setOpen(false)}}
+        <HashLink to="/#Project" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
           Project
         </HashLink>
@@ -50,15 +50,15 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
           </svg>
         </div>
         <div className="pr-8 md:block hidden ">
-          <HashLink to="/#About" className="pr-8 "
+          <HashLink to="/#About" className="pr-8 uppercase"
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
             ABOUT
           </HashLink>
-          <HashLink to="/#Timeline" className="pr-8"
+          <HashLink to="/#Timeline" className="pr-8 uppercase"
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
             TIMELINE
           </HashLink>
-          <HashLink to="/#Project" className="pr-8"
+          <HashLink to="/#Project" className="pr-8 uppercase"
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
             Project
           </HashLink>
