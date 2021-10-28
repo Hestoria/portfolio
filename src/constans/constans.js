@@ -2,8 +2,7 @@ export const projects = [
     {
         title:'pp',
         desc:'',
-        tools:['bs','laravel','sql'],
-        id:0
+        tools:['bs','laravel','sql']
     }
 ]
 
