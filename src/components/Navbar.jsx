@@ -18,9 +18,9 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
           ABOUT
         </HashLink>
-        <HashLink to="/#Timeline" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
+        <HashLink to="/#Technologys" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
-          TIMELINE
+          Technologys
         </HashLink>
         <HashLink to="/#Project" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
@@ -35,7 +35,7 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
   }
   return (
     <>
-      <nav className="flex justify-between items-center h-16 sticky top-0 z-20 text-xl font-bold bg-purple-300 text-purple-600 dark:bg-purple-900 dark:text-purple-50">
+      <nav className="flex justify-between items-center h-16 sticky top-0 z-20 text-xl font-bold border-b-2 border-purple-600 bg-white dark:border-purple-50 text-purple-600 dark:bg-purple-900 dark:text-purple-50">
         <HashLink to="/#Hero" className="pl-8"
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
           <svg className="h-8 w-8" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,9 +54,9 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
             ABOUT
           </HashLink>
-          <HashLink to="/#Timeline" className="pr-8 uppercase"
+          <HashLink to="/#Technologys" className="pr-8 uppercase"
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
-            TIMELINE
+            Technologys
           </HashLink>
           <HashLink to="/#Project" className="pr-8 uppercase"
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
