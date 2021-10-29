@@ -65,6 +65,12 @@
     .tech-item-container{
         @apply text-center py-2;
     }
+
+    .card{}
+    .card-title{}
+    .card-data{}
+    .card-desc{}
+    .card-img{}
 }
 
 @media screen and (max-width: 768px) {
