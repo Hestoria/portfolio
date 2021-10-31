@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import emailjs from 'emailjs-com'
 import { useForm } from "react-hook-form";
 
 const Footer = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const sendEmail = (e) => {
         e.preventDefault();
         window.alert("Thanks for your message! I will reply you as soon as possible.");
@@ -17,11 +17,8 @@ const Footer = () => {
     }
 
     return (
-        <div className="footer border-t-2 border-purple-600 dark:border-purple-50 bg-white dark:bg-purple-900">
+        <div className="footer border-t-2 border-purple-600 dark:border-purple-50 bg-white dark:bg-purple-900 h-auto md:h-full">
             <div className="container md-auto h-full justify-center items-center">
-                {/* <p className="text-xl md:text-2xl font-bold text-center p-4 col-span-2 dark:text-white">Contact ME</p>
-                <p className="text-xl md:text-2xl font-bold text-center p-4 dark:text-white">+1 778 317 0653</p>
-                <p className="text-xl md:text-2xl font-bold text-center p-4 dark:text-white">sam.252787@hotmail.com</p> */}
                 <p className="text-xl md:text-2xl font-bold text-center p-4 dark:text-white">Get In Touch</p>
                 <form onSubmit={handleSubmit(sendEmail)} className="font-bold text-center p-4 flex flex-col items-center dark:bg-white bg-purple-600 rounded">
                     <div className="footer-from"><label className="footer-from-title">Name</label></div>

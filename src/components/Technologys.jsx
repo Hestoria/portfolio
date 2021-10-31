@@ -4,7 +4,6 @@ import { BiCodeBlock } from 'react-icons/bi'
 import { RiToolsLine } from 'react-icons/ri'
 import { BsTerminal } from 'react-icons/bs'
 const Technologys = () => {
-    
     return (
         <div className="content h-auto md:h-full" id="Technologys">
             <div className="container md-auto h-full grid grid-cols-3 gap-4 items-center ">
@@ -14,7 +13,7 @@ const Technologys = () => {
                 {
                     technologys.map( (tech) =>{
                         return(
-                            <div className="tech-container"key={tech.title}>
+                            <div className="tech-container" key={tech.title}>
                                 <div className="tech-img-container">
                                     {tech.icon === 1 ? <BiCodeBlock className="tech-img"/>: tech.icon === 2 ? <RiToolsLine className="tech-img"/> : <BsTerminal className="tech-img"/>}
                                 </div>
