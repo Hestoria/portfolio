@@ -14,7 +14,7 @@ const Technologys = () => {
                 {
                     technologys.map( (tech) =>{
                         return(
-                            <div className="tech-container">
+                            <div className="tech-container"key={tech.title}>
                                 <div className="tech-img-container">
                                     {tech.icon === 1 ? <BiCodeBlock className="tech-img"/>: tech.icon === 2 ? <RiToolsLine className="tech-img"/> : <BsTerminal className="tech-img"/>}
                                 </div>
@@ -22,7 +22,7 @@ const Technologys = () => {
                                 <div className="tech-desc">{tech.desc}</div>
                                 {tech.data.map( (data)=>{
                                     return(
-                                        <div className="tech-item-container">
+                                        <div className="tech-item-container" key={data}>
                                             <p className="tech-item-content">{data}</p>
                                         </div>
                                     )
