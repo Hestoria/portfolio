@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useRef, useState } from 'react'
 import { technologys } from '../constans/constans'
 import { BiCodeBlock } from 'react-icons/bi'
 import { RiToolsLine } from 'react-icons/ri'
