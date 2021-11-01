@@ -1,28 +1,35 @@
 export const projects = [
     {
-        title:'pp',
-        desc:'',
-        tools:['bs','laravel','sql']
+        title:'PProperties',
+        desc:'Professional Properties Co. is an estate agency from Hong Kong.',
+        tools:['Bootstrap','Laravel','SQL'],
+        img:'https://www.pproperties.com.hk/uploads/images/f6db0655e4d87df15932867752d9871e.jpg'
+    },
+    {
+        title:'Profolio',
+        desc:'Current Website.',
+        tools:['React','Tailwind Css','EmailJs'],
+        img:'https://dental-cdi.com/images/image-not-found.jpg'
     }
 ]
 
 export const technologys = [
     {
         icon:3,
-        title:'LAN',
-        desc:'asdfjksajfkdjskfsdf',
-        data:['Java','JavaScript','PHP']
+        title:'Languages',
+        desc:'Languages I speak.',
+        data:['Java','JavaScript','PHP','Python']
     },
     {
         icon:2,
         title:'DEV TOOLS',
-        desc:'asdfjksajfkdjskfsdf',
-        data:['VScode','Bootstrap','Tailwind CSS']
+        desc:'Developer tools I use.',
+        data:['VScode','Bootstrap','Tailwind CSS','Git/Github/Gitlab','Android studio']
     },
     {
         icon:1,
-        title:'FW',
-        desc:'asdfjksajfkdjskfsdf',
+        title:'framework',
+        desc:'Framework I learned.',
         data:['Laravel','React','Wordpress']
     }
 ]

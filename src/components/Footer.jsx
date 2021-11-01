@@ -1,26 +1,27 @@
-import React from 'react'
+import React,{ useRef } from 'react'
 import emailjs from 'emailjs-com'
 import { useForm } from "react-hook-form";
 
 const Footer = () => {
+    const form = useRef();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const sendEmail = (e) => {
         e.preventDefault();
         window.alert("Thanks for your message! I will reply you as soon as possible.");
-        // emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, form.current,process.env.REACT_APP_EMAIL_USER_ID)
-        //   .then((result) => {
-        //       console.log(result.text);
-        //   }, (error) => {
-        //       console.log(error.text);
-        //   });
+        emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, form.current,process.env.REACT_APP_EMAIL_USER_ID)
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
         e.target.reset();
     }
 
     return (
-        <div className="footer border-t-2 border-purple-600 dark:border-purple-50 bg-white dark:bg-purple-900 h-auto md:h-full">
+        <div className="footer border-t-2 border-purple-600 dark:border-purple-50 bg-white dark:bg-purple-900">
             <div className="container md-auto h-full justify-center items-center">
                 <p className="text-xl md:text-2xl font-bold text-center p-4 dark:text-white">Get In Touch</p>
-                <form onSubmit={handleSubmit(sendEmail)} className="font-bold text-center p-4 flex flex-col items-center dark:bg-white bg-purple-600 rounded">
+                <form onSubmit={handleSubmit(sendEmail)} ref={form} className="font-bold text-center p-4 flex flex-col items-center dark:bg-white bg-purple-600 rounded">
                     <div className="footer-from"><label className="footer-from-title">Name</label></div>
                     <div className="footer-from"><input type="text" {...register('name',{ required: true })} placeholder="Name" className="footer-from-input"/></div>
                     <div className="footer-from">{errors.message && <p className="text-red-400 dark:text-red-600">This field is required</p>}</div>

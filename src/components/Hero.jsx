@@ -12,11 +12,11 @@ const Hero = () => {
                     sm:w-650 sm:-left-1/5
                     lg:h-400 lg:w-700 lg:-left-40
                     md:h-400 md:w-700 md:-left-2/5 absolute "></div>
-                    <p className="content-text">hi there</p>
-                    <p className="content-text">im</p>
-                    <p className="content-text">
+                    <p className="content-text">hi there!</p>
+                    <p className="content-text">I am Sam</p>
+                    <p className="content-text break-normal">
                         <Typewriter
-                            words={['hello','world']}
+                            words={['A Web developer','A Software developer']}
                             loop={true}
                             cursor
                             cursorStyle='_'

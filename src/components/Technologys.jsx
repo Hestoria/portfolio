@@ -7,7 +7,7 @@ const Technologys = () => {
     return (
         <div className="content h-auto md:h-full" id="Technologys">
             <div className="container md-auto h-full grid grid-cols-3 gap-4 items-center ">
-                <p className="col-span-3 text-center items-bottom text-xl md:text-2xl lg:text-3xl text-purple-600 dark:text-purple-50 font-bold pt-10 border-b-2 border-purple-600 dark:border-purple-50">
+                <p className="col-span-3 text-center items-bottom text-xl md:text-2xl lg:text-3xl text-purple-600 dark:text-purple-50 font-bold py-10 border-b-2 border-purple-600 dark:border-purple-50">
                     TECHNOLOGYS
                 </p>
                 {
