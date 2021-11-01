@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { HashLink } from 'react-router-hash-link'
-
 const Navbar = ({ DarkTheme, setDarkTheme }) => {
   const [Open, setOpen] = useState(false)
   const [windowsWidth, setwindowsWidth] = useState(window.innerWidth)
