@@ -5,8 +5,7 @@ import { useForm } from "react-hook-form";
 const Footer = () => {
     const form = useRef();
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const sendEmail = (e) => {
-        e.preventDefault();
+    const sendEmail = () => {
         window.alert("Thanks for your message! I will reply you as soon as possible.");
         emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, form.current,process.env.REACT_APP_EMAIL_USER_ID)
           .then((result) => {
@@ -14,7 +13,7 @@ const Footer = () => {
           }, (error) => {
               console.log(error.text);
           });
-        e.target.reset();
+        form.current.reset();
     }
 
     return (
