@@ -1,11 +1,30 @@
-import React,{ useRef, useState } from 'react'
+import React,{ useRef, useEffect } from 'react'
 import { technologys } from '../constans/constans'
 import { BiCodeBlock } from 'react-icons/bi'
 import { RiToolsLine } from 'react-icons/ri'
 import { BsTerminal } from 'react-icons/bs'
+import useElementOnScreen from '../hooks/useElementOnScreen'
+import { animated, useSpring } from 'react-spring'
+
 const Technologys = () => {
+    const targetRef = useRef(null);
+    const isVisable = useElementOnScreen({
+        root:null,
+        rootMargin: '0px',
+        threshold: 0.3
+    },targetRef);
+
+    const [styles, api] = useSpring(()=>({
+        from: { opacity: 0 , y: -300 },
+        to: { opacity:1 , y : 0 },
+        config: { duration: 500 },
+    }))
+    useEffect(() => {
+        api.start({opacity: isVisable? 1 : 0, y: isVisable? 0: 300 });// eslint-disable-next-line
+    },[isVisable]) 
+
     return (
-        <div className="content h-auto md:h-full" id="Technologys">
+        <div className="content h-auto md:h-full" id="Technologys" ref={targetRef}>
             <div className="container md-auto h-full grid grid-cols-3 gap-4 items-center ">
                 <p className="col-span-3 text-center items-bottom text-xl md:text-2xl lg:text-3xl text-purple-600 dark:text-purple-50 font-bold py-10 border-b-2 border-purple-600 dark:border-purple-50">
                     TECHNOLOGYS
@@ -13,7 +32,7 @@ const Technologys = () => {
                 {
                     technologys.map( (tech) =>{
                         return(
-                            <div className="tech-container" key={tech.title}>
+                            <animated.div className="tech-container" key={tech.title} style={styles}>
                                 <div className="tech-img-container">
                                     {tech.icon === 1 ? <BiCodeBlock className="tech-img"/>: tech.icon === 2 ? <RiToolsLine className="tech-img"/> : <BsTerminal className="tech-img"/>}
                                 </div>
@@ -26,7 +45,7 @@ const Technologys = () => {
                                         </div>
                                     )
                                 })}
-                            </div>  
+                            </animated.div>  
                         )
                     })
                 }

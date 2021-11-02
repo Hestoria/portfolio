@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useRef as UR, useEffect } from 'react'
 import { projects } from '../constans/constans'
 
 const project = () => {
