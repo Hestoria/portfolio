@@ -26,6 +26,7 @@ const Technologys = () => {
         to: { opacity:1 , y : 0 },
         config: { duration: 500 },
     }))
+
     useEffect(() => {
         if(windowsWidth <= 768){
             api.start({opacity: isVisable? 1 : 0, x: isVisable? 0: 300 ,y:0});
