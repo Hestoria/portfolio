@@ -1,7 +1,6 @@
 import React from 'react'
 import { projects } from '../constans/constans'
-
-const project = () => {
+const Project = () => {
     return (
         <div className="content" id="Project">
             <div className="container md-auto h-full">
@@ -33,4 +32,4 @@ const project = () => {
     )
 }
 
-export default project
+export default Project

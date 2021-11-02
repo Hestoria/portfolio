@@ -26,7 +26,7 @@ export const technologys = [
         icon:2,
         title:'DEV TOOLS',
         desc:'Developer tools I use.',
-        data:['VScode','Bootstrap','Tailwind CSS','Git/Github/Gitlab','Android studio']
+        data:['VScode','Bootstrap','Tailwind CSS','Git','Android studio']
     },
     {
         icon:1,

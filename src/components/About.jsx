@@ -2,7 +2,7 @@ import React from 'react'
 import AboutImg from '../assets/aboutimg.svg'
 import CV from '../assets/LeePoSan_CV.pdf'
 const About = () => {
-    var aboutme = 'I am just graduated from the Hong Kong Institute of Vocational education,which my major is Software Engineering. Recently, I moved to Canada and seeking an opportunity to begin my career here.'
+    var aboutme = 'I have just graduated from the Hong Kong Institute of Vocational education,which my major is Software Engineering. Recently, I moved to Canada and seeking an opportunity to begin my career here.'
     return (
         <div className="content" id='About'>
             <div className="container md-auto h-full grid grid-cols-3 gap-4 justify-center items-center">

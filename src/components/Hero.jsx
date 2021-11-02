@@ -17,7 +17,7 @@ const Hero = () => {
     return (
         <div className="content" id='Hero'>
             <div className="container md-auto h-full items-center grid relative overflow-hidden">
-                <animated.div style={lefttoright} className="flex flex-col justify-center h-full w-full md:text-left text-center px-24">
+                <animated.div style={lefttoright} className="flex flex-col justify-center h-full w-full md:text-left text-center px-4 md:px-24">
                     <div  className="bg-purple-600 rounded-full 
                     h-300 w-575 -left-3/5
                     sm:w-650 sm:-left-1/5

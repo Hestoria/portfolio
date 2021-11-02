@@ -19,7 +19,7 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
         </HashLink>
         <HashLink to="/#Technologys" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
-          Technologys
+          Technologies
         </HashLink>
         <HashLink to="/#Project" className="p-4 text-center h-12 uppercase" onClick={ () =>{setOpen(false)}}
           scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
