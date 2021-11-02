@@ -17,7 +17,7 @@ const Project = () => {
                                         <p class="leading-relaxed text-base">
                                             {project.tools.map( (tool)=>{
                                                 return(
-                                                    <span className="px-4 rounded-full bg-white text-purple-600 dark:bg-purple-600 dark:text-white " key={tool}>{tool}</span>
+                                                    <span className="px-4 inline-block rounded-full bg-white text-purple-600 dark:bg-purple-600 dark:text-white " key={tool}>{tool}</span>
                                                 )
                                             } )}
                                         </p>
