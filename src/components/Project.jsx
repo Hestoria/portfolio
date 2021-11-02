@@ -1,4 +1,4 @@
-import React,{ useRef as UR, useEffect } from 'react'
+import React from 'react'
 import { projects } from '../constans/constans'
 
 const project = () => {
@@ -10,10 +10,9 @@ const project = () => {
                     {
                         projects.map( (project)=>{
                             return(
-                                <div class="p-4 col-span-3 md:col-span-1" key={project.title}>
+                                <div class="p-4 col-span-3 md:col-span-1 hover:cursor-pointer" key={project.title} onClick={()=> project.url === '/'? '':window.open(project.url, "_blank")}>
                                     <div class="dark:bg-white p-6 rounded-lg bg-purple-600">
-                                        <img class="h-56 w-56 rounded mx-auto mb-6" 
-                                            src={project.img} alt="cover img"/>
+                                        <img class="h-56 w-56 rounded mx-auto mb-6" src={project.img} alt="cover img"/>
                                         <h3 class="tracking-widest text-indigo-300 dark:text-indigo-500 text-xs font-medium title-font ">{project.title}</h3>
                                         <h2 class="text-lg text-white dark:text-gray-900 font-medium title-font mb-4 ">{project.desc}</h2>
                                         <p class="leading-relaxed text-base">

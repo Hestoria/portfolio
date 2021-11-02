@@ -3,13 +3,15 @@ export const projects = [
         title:'PProperties',
         desc:'Professional Properties Co. is an estate agency from Hong Kong.',
         tools:['Bootstrap','Laravel','SQL'],
-        img:'https://www.pproperties.com.hk/uploads/images/f6db0655e4d87df15932867752d9871e.jpg'
+        img:'https://www.pproperties.com.hk/uploads/images/f6db0655e4d87df15932867752d9871e.jpg',
+        url:'https://www.pproperties.com.hk/'
     },
     {
         title:'Profolio',
         desc:'Current Website.',
         tools:['React','Tailwind Css','React-Spring'],
-        img:'https://dental-cdi.com/images/image-not-found.jpg'
+        img:'https://dental-cdi.com/images/image-not-found.jpg',
+        url:'/'
     }
 ]
 

@@ -7,7 +7,7 @@ import useElementOnScreen from '../hooks/useElementOnScreen'
 import { animated, useSpring } from 'react-spring'
 
 const Technologys = () => {
-    const targetRef = useRef(null);
+    const targetRef = useRef(false);
     const isVisable = useElementOnScreen({
         root:null,
         rootMargin: '0px',
