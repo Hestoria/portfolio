@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutImg from '../assets/aboutimg.svg'
-import CV from '../assets/LeePoSan_CV.pdf'
+import CV from '../assets/Sam\'s Resume.pdf'
 const About = () => {
     var aboutme = 'I have just graduated from the Hong Kong Institute of Vocational education,which my major is Software Engineering. Recently, I moved to Canada and seeking an opportunity to begin my career here.'
     return (
