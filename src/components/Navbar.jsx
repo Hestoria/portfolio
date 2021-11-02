@@ -55,7 +55,7 @@ const Navbar = ({ DarkTheme, setDarkTheme }) => {
           </HashLink>
           <HashLink to="/#Technologys" className="pr-8 uppercase"
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>
-            Technologys
+            Technologies
           </HashLink>
           <HashLink to="/#Project" className="pr-8 uppercase"
             scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}>

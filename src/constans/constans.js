@@ -9,7 +9,7 @@ export const projects = [
     {
         title:'Profolio',
         desc:'Current Website.',
-        tools:['React','Tailwind Css','React-Spring'],
+        tools:['React','React-Spring','Tailwind Css'],
         img:'https://dental-cdi.com/images/image-not-found.jpg',
         url:'/'
     }
