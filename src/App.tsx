@@ -1,4 +1,8 @@
-function App() {
+import React from "react";
+
+interface AppProps {}
+
+export const App: React.FC<AppProps> = ({}) => {
   return (
     <main className="App">
       <div className="leftSection">
@@ -41,6 +45,6 @@ function App() {
     //   }}
     // />
   );
-}
+};
 
 export default App;
