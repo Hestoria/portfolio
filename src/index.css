@@ -1,35 +1,4 @@
 body,
 html {
-  height: 100%;
   margin: 0;
-}
-
-.App {
-  display: flex;
-  height: 100vh;
-}
-
-.leftSection {
-  flex: 0 0 200px; /* Fixed width for the left section */
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-right: 1px solid #ccc; /* Separator line */
-}
-
-.rightSection {
-  flex: 1; /* Take remaining width */
-  position: relative; /* Position relative for overlay positioning */
-  overflow-y: auto; /* Enable vertical scrollbar if content overflows */
-  padding: 20px;
-}
-
-.scrollableContent {
-  /* Additional styling for scrollable content */
-  position: relative; /* Position relative for overlay positioning */
-}
-
-.overlay {
-  top: 0; /* Position it at the top of the scrollable content */
-  position: sticky;
-  height: 100vh;
 }
