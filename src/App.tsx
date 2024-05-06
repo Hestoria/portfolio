@@ -1,49 +1,51 @@
+import SideBySideLayout from "@/components/layout/sidebyside";
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import React from "react";
-
+import { Button } from "./components/ui/button";
 interface AppProps {}
 
 export const App: React.FC<AppProps> = ({}) => {
   return (
-    <main className="App">
-      <div className="leftSection">
-        <h1>Fixed Left Section</h1>
-        <p>This section remains fixed while the right section is scrollable.</p>
-      </div>
-      <div className="rightSection">
-        <h1>Scrollable Right Section</h1>
-        <div className="scrollableContent">
-          {[...Array(100).keys()].map((index) => (
-            <div
-              className="overlay"
-              style={{ backgroundColor: index % 2 ? "red" : "blue" }}
-            >
-              Scrollable Content {index}
-            </div>
-          ))}
-          {/* Overlay div */}
-        </div>
-      </div>
+    <main className="xl:flex xl:overflow-hidden h-screen">
+      <SideBySideLayout
+        leftSession={
+          <Card className="w-[350px]">
+            <CardHeader>
+              <CardTitle>Create project</CardTitle>
+              <CardDescription>
+                Deploy your new project in one-click.
+              </CardDescription>
+            </CardHeader>
+
+            <CardFooter className="flex justify-between">
+              <Button variant="outline">Cancel</Button>
+              <Button>Deploy</Button>
+            </CardFooter>
+          </Card>
+        }
+        rightSession={
+          <div className="scrollableContent">
+            {[...Array(20).keys()].map((index) => (
+              <div
+                key={index}
+                className="sticky h-screen"
+                style={{
+                  backgroundColor: index % 2 ? "red" : "blue",
+                }}
+              >
+                Scrollable Content {index}
+              </div>
+            ))}
+          </div>
+        }
+      />
     </main>
-    // <motion.div
-    //   className="box"
-    //   animate={{
-    //     scale: [1, 1, 1, 1, 1],
-    //     rotate: [0, 0, 180, 180, 0],
-    //     borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-    //   }}
-    //   whileHover={{
-    //     scale: [null, 1.5, 1.4],
-    //     rotate: 0, // Reset rotation
-    //     borderRadius: "0%", // Reset border radius
-    //   }}
-    //   transition={{
-    //     duration: 2,
-    //     ease: "easeInOut",
-    //     times: [0, 0.2, 0.5, 0.8, 1],
-    //     repeat: Infinity,
-    //     repeatDelay: 1,
-    //   }}
-    // />
   );
 };
 
