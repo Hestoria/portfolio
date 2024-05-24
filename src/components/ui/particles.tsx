@@ -44,7 +44,7 @@ const particlesOptions: ISourceOptions = {
       value: "#000000",
     },
   },
-  fpsLimit: 240,
+  fpsLimit: 60,
   interactivity: {
     detectsOn: "window",
     events: {
@@ -70,10 +70,10 @@ const particlesOptions: ISourceOptions = {
   },
   particles: {
     color: {
-      value: "#ffffff",
+      value: "#333",
     },
     links: {
-      color: "#ffffff",
+      color: "#333",
       distance: 150,
       enable: true,
       opacity: 0.5,
