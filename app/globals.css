@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --beige: 30, 24%, 72%;
+    --perriwinkle: 215, 27%, 60%;
+    --dusty-rose: 5, 29%, 66%;
+    --maroon-brown: 8, 34%, 33%;
+    --muted-green: 76, 24%, 68%;
+
+    --primary: var(--beige);
+    --primary-foreground: 0, 0%, 100%;
+    --secondary: 240, 100%, 50%;
+    --secondary-foreground: 0, 0%, 100%;
+    --destructive: 0, 100%, 50%;
+    --destructive-foreground: 0, 0%, 100%;
+    --muted: 0, 0%, 80%;
+    --muted-foreground: 0, 0%, 20%;
+    --accent: 340, 100%, 50%;
+    --accent-foreground: 0, 0%, 100%;
+    --popover: 220, 15%, 95%;
+    --popover-foreground: 0, 0%, 10%;
+    --card: 210, 20%, 98%;
+    --card-foreground: 0, 0%, 5%;
+  }
+
+  body {
+    @apply font-primary bg-primary text-white;
+  }
+}
+
+/*
+Beige: #c8b7a6
+Beige: hsl(30, 24%, 72%)
+
+Perriwinkle: #7d94b5
+Perriwinkle: hsl(215, 27%, 60%)
+
+Dusty Rose: #c29591
+Dusty Rose: hsl(5, 29%, 66%)
+
+Maroon Brown: #703f37
+Maroon Brown: hsl(8, 34%, 33%)
+
+Muted Green: hsl(76, 24%, 68%)
+Muted Green: #b6c199 */
