@@ -1,7 +1,5 @@
-type Props = {};
-
-const contact = (props: Props) => {
-  return <div>animated form with js mail</div>;
+const contact = () => {
+  return <div id="contact">contact</div>;
 };
 
 export default contact;

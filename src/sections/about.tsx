@@ -1,7 +1,9 @@
-type Props = {};
-
-const about = (props: Props) => {
-  return <div>not sure about about sections yet...</div>;
+const about = () => {
+  return (
+    <div id="about" className="h-screen">
+      about
+    </div>
+  );
 };
 
 export default about;

@@ -1,46 +1,22 @@
 import Sections from "@/sections";
-import { createContext, useMemo, useState } from "react";
-import { Theme } from "./lib/types";
+import { useScroll, useSpring } from "framer-motion";
 
-export const ThemeContext = createContext<{
-  theme: Theme;
-  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
-}>({
-  theme: Theme.Dark,
-  setTheme: function (): void {
-    console.error("Set Theme function not implemented.");
-  },
-});
 const App = () => {
-  const [theme, setTheme] = useState<Theme>(Theme.Dark);
-
-  useMemo(() => {
-    // to add more themes
-    switch (theme) {
-      case Theme.Dark: {
-        document.documentElement.classList.add("dark");
-        break;
-      }
-      case Theme.Light: {
-        document.documentElement.classList.remove("dark");
-        break;
-      }
-      default: {
-        return;
-      }
-    }
-  }, [theme]);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
-    <main className="max-w-7xl mx-auto relative">
-      <ThemeContext.Provider value={{ theme, setTheme }}>
-        <Sections.Navbar />
-        <Sections.Hero />
-        <Sections.About />
-        <Sections.WorkExperience />
-        <Sections.Contact />
-        <Sections.Footer />
-      </ThemeContext.Provider>
+    <main className="relative">
+      <Sections.Navbar scaleX={scaleX} />
+      <Sections.Hero />
+      <Sections.About />
+      <Sections.WorkExperience />
+      <Sections.Contact />
+      <Sections.Footer />
     </main>
   );
 };
