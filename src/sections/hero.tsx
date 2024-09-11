@@ -1,7 +1,9 @@
-type Props = {};
-
-const hero = (props: Props) => {
-  return <div>3js canvas, with name and start scrolling button</div>;
+const hero = () => {
+  return (
+    <div className="h-screen" id="hero">
+      hero
+    </div>
+  );
 };
 
 export default hero;
