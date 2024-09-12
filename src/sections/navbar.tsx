@@ -8,7 +8,7 @@ type Props = {
 const navbar = ({ scaleX }: Props) => {
   return (
     <div className="w-full h-12 md:h-20 z-50 sticky top-0 backdrop-blur-lg">
-      <nav className="w-full h-12 md:h-20 items-center flex py-2 px-1 md:py-4 md:px-2 font-mono text-lg justify-between">
+      <nav className="w-full h-12 md:h-20 items-center flex py-2 px-1 md:py-4 md:px-2 font-mono text-lg justify-between border-b-2 border-x-white-500">
         <div className="flex h-5 items-center space-x-4 ">
           <a href="/">Sam Lee</a>
           <Separator orientation="vertical" className="bg-white" />
