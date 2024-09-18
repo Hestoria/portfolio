@@ -1,8 +1,11 @@
 import Sections from "@/sections";
 import { useScroll, useSpring } from "framer-motion";
+import { useState } from "react";
 import LoadingBanner from "./components/ui/loading-banner";
 
 const App = () => {
+  const [showBanners, setShowBanners] = useState(true);
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -12,7 +15,10 @@ const App = () => {
 
   return (
     <main className="relative">
-      <LoadingBanner />
+      <LoadingBanner
+        showBanners={showBanners}
+        setShowBanners={setShowBanners}
+      />
       <Sections.Navbar scaleX={scaleX} />
       <Sections.Hero />
       <Sections.About />

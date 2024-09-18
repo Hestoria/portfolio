@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
-const LoadingBanner = () => {
-  const [showBanners, setShowBanners] = useState(true);
+export interface Props {
+  showBanners: boolean;
+  setShowBanners: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const LoadingBanner = ({ showBanners, setShowBanners }: Props) => {
   const containerVariants = {
     show: {
       display: showBanners ? "flex" : "none",
       transition: {
-        staggerChildren: 0.2, // Adjust to match the desired stagger timing
+        staggerChildren: 0.2,
       },
     },
   };
@@ -18,7 +21,7 @@ const LoadingBanner = () => {
     },
     show: {
       y: "100%",
-      transition: { duration: 0.5 }, // Adjust to match the desired animation duration
+      transition: { duration: 0.5 },
     },
   };
   return (
@@ -31,13 +34,13 @@ const LoadingBanner = () => {
       }}
       className="absolute top-0 left-0 w-full h-screen z-[60]"
     >
-      {Array(6)
+      {Array(5)
         .fill(0)
         .map((_, index) => (
           <motion.div
             key={index}
             variants={bannerVariants}
-            className="h-full w-1/6 bg-white"
+            className="h-full w-1/5 bg-white"
           />
         ))}
     </motion.div>
