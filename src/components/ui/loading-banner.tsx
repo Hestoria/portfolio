@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 
 export interface Props {
-  showBanners: boolean;
-  setShowBanners: React.Dispatch<React.SetStateAction<boolean>>;
+  setInit: React.Dispatch<React.SetStateAction<boolean>>;
+  closeDelay?: number
 }
 
-const LoadingBanner = ({ showBanners, setShowBanners }: Props) => {
+const LoadingBanner = ({ setInit, closeDelay }: Props) => {
   const containerVariants = {
     show: {
-      display: showBanners ? "flex" : "none",
       transition: {
         staggerChildren: 0.35,
       },
@@ -23,7 +22,7 @@ const LoadingBanner = ({ showBanners, setShowBanners }: Props) => {
       y: "100%",
       transition: {
         ease: [0.35, 0.01, -0.05, 0.95],
-        duration: 1.6,
+        duration: 2,
       },
     },
   };
@@ -34,9 +33,11 @@ const LoadingBanner = ({ showBanners, setShowBanners }: Props) => {
       initial="hidden"
       animate="show"
       onAnimationComplete={() => {
-        setShowBanners(false);
+        setTimeout(() => {
+          setInit(false);
+        }, closeDelay ?? 1500)
       }}
-      className="w-full h-screen z-[60] overflow-hidden"
+      className="w-full flex h-screen z-[60] overflow-hidden"
     >
       {Array(5)
         .fill(0)
@@ -44,7 +45,7 @@ const LoadingBanner = ({ showBanners, setShowBanners }: Props) => {
           <motion.div
             key={index}
             variants={bannerVariants}
-            className="h-full w-1/5 bg-white"
+            className="h-full w-1/5 backdrop-blur-sm"
           />
         ))}
     </motion.div>

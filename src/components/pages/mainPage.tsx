@@ -1,9 +1,7 @@
 import Sections from "../sections";
 import { useSpring, useScroll } from "framer-motion";
 
-type Props = {};
-
-const mainPage = (props: Props) => {
+const mainPage = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,

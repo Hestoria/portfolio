@@ -6,7 +6,7 @@ const Hero = () => {
     <motion.div
       id="hero"
       className="relative bg-cover bg-center"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.25 }}
       animate={{
         opacity: 0.85,
       }}
@@ -23,14 +23,13 @@ const Hero = () => {
         <div className="sm:mt-36 mt-20 px-4 w-full">
           <BoxReveal delay={1} className="mx-auto">
             <p className="text-pretty uppercase xl:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-white font-mono">
-              Hi, I am sam.
+              {/* Hi, I am sam. */}
             </p>
           </BoxReveal>
         </div>
         <div className="sm:mt-26 mt-12 px-4 w-full">
           <BoxReveal delay={1.5} className="mx-auto">
             <p className="text-pretty xl:text-2xl md:text-xl sm:text-lg text-base font-mono">
-              content content content content content content content
             </p>
           </BoxReveal>
         </div>

@@ -1,18 +1,22 @@
 import MainPage from "@/components/pages/mainPage";
 import { useState } from "react";
-import LoadingBanner from "@/components/ui/loading-banner";
-
+import { AnimatePresence } from "framer-motion";
+import InitPage from "@/components/pages/initPage"
 const App = () => {
-  const [showBanners, setShowBanners] = useState(true);
+  const [init, setInit] = useState(true);
 
   return (
     <main className="relative">
-      {showBanners ? (
-        <LoadingBanner
-          showBanners={showBanners}
-          setShowBanners={setShowBanners}
-        />
-      ) : (
+      <AnimatePresence mode="wait">
+        {init && (
+          <div>
+            <InitPage
+              setInit={setInit}
+            />
+          </div>)
+        }
+      </AnimatePresence>
+      {!init && (
         <MainPage />
       )}
     </main>
