@@ -1,4 +1,4 @@
-import { Timeline } from "../components/ui/timeline";
+import { Timeline } from "@/components/ui/timeline";
 
 // TODO: add work exp
 const _data: Array<{ title: string; content: React.ReactNode }> = [

@@ -1,5 +1,5 @@
+import { Separator } from "@/components/ui/separator";
 import { motion, MotionValue } from "framer-motion";
-import { Separator } from "../components/ui/separator";
 
 export interface Props {
   scaleX: MotionValue<number>;
