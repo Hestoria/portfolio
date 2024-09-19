@@ -36,7 +36,7 @@ const LoadingBanner = ({ showBanners, setShowBanners }: Props) => {
       onAnimationComplete={() => {
         setShowBanners(false);
       }}
-      className="absolute top-0 left-0 w-full h-screen z-[60]"
+      className="w-full h-screen z-[60] overflow-hidden"
     >
       {Array(5)
         .fill(0)
