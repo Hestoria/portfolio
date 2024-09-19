@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 interface BoxRevealProps {
   children: JSX.Element;
   width?: "fit-content" | "100%";
-  boxColor?: string;
   duration?: number;
   className?: string;
   delay?: number;
@@ -15,7 +14,6 @@ interface BoxRevealProps {
 export const BoxReveal = ({
   children,
   width = "fit-content",
-  boxColor,
   duration,
   delay,
   className,

@@ -1,4 +1,4 @@
-import Sections from "@/sections";
+import Sections from "@/components/sections";
 import { useScroll, useSpring } from "framer-motion";
 import { useState } from "react";
 import LoadingBanner from "./components/ui/loading-banner";
@@ -15,16 +15,21 @@ const App = () => {
 
   return (
     <main className="relative">
-      <LoadingBanner
-        showBanners={showBanners}
-        setShowBanners={setShowBanners}
-      />
-      <Sections.Navbar scaleX={scaleX} />
-      <Sections.Hero />
-      <Sections.About />
-      <Sections.WorkExperience />
-      <Sections.Contact />
-      <Sections.Footer />
+      {showBanners ? (
+        <LoadingBanner
+          showBanners={showBanners}
+          setShowBanners={setShowBanners}
+        />
+      ) : (
+        <>
+          <Sections.Navbar scaleX={scaleX} />
+          <Sections.Hero />
+          <Sections.About />
+          <Sections.WorkExperience />
+          <Sections.Contact />
+          <Sections.Footer />
+        </>
+      )}
     </main>
   );
 };
