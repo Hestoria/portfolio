@@ -10,14 +10,13 @@ const initPage = (props: Props) => {
     <motion.div
       key="initPage"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 1.75 } }}
+      animate={{ opacity: 0.75, transition: { duration: 1.25 } }}
       exit={{
-        // TODO edit exit animation
         opacity: 0,
-        transition: { duration: 2.5, delay: 2.5 },
+        transition: { duration: 0.45, delay: 2.5 },
       }}
       className="bg-cover bg-center w-full h-screen"
-      style={{ backgroundImage: `url('bg1.webp')` }}
+      style={{ backgroundImage: `url('1.webp')` }}
     >
       <LoadingBanner {...props} />
     </motion.div>

@@ -29,7 +29,6 @@ const techHighLight = (() => {
   for (let i = 0; i < _col; i++) {
     a.push(_.slice(i * _row, i * _row + _row));
   }
-  console.log(a);
   return a;
 })();
 
@@ -105,7 +104,7 @@ const LoadingBanner = ({ setPageState, closeDelay }: Props) => {
         <motion.div
           key={index}
           variants={bannerVariants}
-          className="h-full w-1/4 backdrop-blur-sm grid place-items-center"
+          className="h-full w-1/4 grid place-items-center"
         >
           <motion.div className="h-4/5 w-full grid grid-cols-1 gap-8">
             {row.map((Logo, i) => (
