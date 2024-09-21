@@ -14,7 +14,7 @@ const navbar = ({ scaleX }: Props) => {
         y: 0,
       }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
-      className="w-full h-20 z-50 sticky top-0 backdrop-blur-lg"
+      className="w-full h-20 z-50 fixed top-0 backdrop-blur-lg"
     >
       <nav className="w-full h-20 items-center flex py-2 px-1 md:py-4 md:px-2 font-mono text-lg justify-between border-b-2 border-x-white-500">
         <div className="flex h-5 items-center space-x-4 ">
