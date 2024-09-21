@@ -1,5 +1,6 @@
-import { LogoNpm } from "@styled-icons/ionicons-solid/LogoNpm";
+
 import { motion } from "framer-motion";
+
 
 export interface Props {
   setInit: React.Dispatch<React.SetStateAction<boolean>>;
@@ -63,13 +64,13 @@ const LoadingBanner = ({ setInit, closeDelay }: Props) => {
       }}
       className="w-full flex h-screen z-[60] overflow-hidden"
     >
-      {[LogoNpm, LogoNpm, LogoNpm, LogoNpm, LogoNpm].map((Logo, index) => (
+      {[].map((Logo, index) => (
         <motion.div
           key={index}
           variants={bannerVariants}
           className="h-full w-1/5 backdrop-blur-sm justify-center flex flex-col items-center"
         >
-          <Logo className="px-5" />
+          {/* <Logo className="px-5" /> */}
           <motion.p
             custom={index}
             variants={bannerTitleVariants}
@@ -77,7 +78,7 @@ const LoadingBanner = ({ setInit, closeDelay }: Props) => {
             animate="show"
             className="text-xl"
           >
-            npm
+            short desc
           </motion.p>
         </motion.div>
       ))}

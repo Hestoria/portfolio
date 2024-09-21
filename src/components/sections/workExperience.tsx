@@ -1,5 +1,9 @@
 import { Timeline } from "@/components/ui/timeline";
-
+// import { LogoNpm as NpmLogo } from "@styled-icons/ionicons-solid/LogoNpm";
+// import { Typescript as TypescriptLogo } from "@styled-icons/simple-icons/Typescript"
+// import { ReactLogo } from "@styled-icons/simple-icons/ReactLogo"
+// import { Rust as RustLogo } from "@styled-icons/fa-brands"
+// import { Cplusplus as CppLogo } from "@styled-icons/simple-icons/Cplusplus"
 // TODO: add work exp
 const _data: Array<{ title: string; content: React.ReactNode }> = [
   {
