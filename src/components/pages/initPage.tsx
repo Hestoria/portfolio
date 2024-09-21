@@ -3,7 +3,7 @@ import LoadingBanner, {
 } from "@/components/ui/loading-banner";
 import { motion } from "framer-motion";
 
-interface Props extends LoadingProps {}
+interface Props extends LoadingProps { }
 
 const initPage = (props: Props) => {
   return (
@@ -14,7 +14,7 @@ const initPage = (props: Props) => {
         transition: { duration: 2.5, delay: 2.5 },
       }}
       className="bg-cover bg-center w-full h-screen"
-      style={{ backgroundImage: `url('bg2.jpg')` }}
+    // style={{ backgroundImage: `url('bg2.jpg')` }}
     >
       <LoadingBanner {...props} />
     </motion.div>
