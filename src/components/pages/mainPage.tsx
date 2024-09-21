@@ -1,5 +1,5 @@
+import { motion, useScroll, useSpring } from "framer-motion";
 import Sections from "../sections";
-import { useSpring, useScroll } from "framer-motion";
 
 const mainPage = () => {
   const { scrollYProgress } = useScroll();
@@ -10,14 +10,14 @@ const mainPage = () => {
   });
 
   return (
-    <div>
+    <motion.div>
       <Sections.Navbar scaleX={scaleX} />
       <Sections.Hero />
       <Sections.About />
       <Sections.WorkExperience />
       <Sections.Contact />
       <Sections.Footer />
-    </div>
+    </motion.div>
   );
 };
 

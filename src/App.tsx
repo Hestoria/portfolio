@@ -1,24 +1,30 @@
+import InitPage from "@/components/pages/initPage";
 import MainPage from "@/components/pages/mainPage";
-import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import InitPage from "@/components/pages/initPage"
+import { useState } from "react";
+
+export enum PageState {
+  INIT,
+  INIT_EXITING,
+  MAIN,
+}
+
 const App = () => {
-  const [init, setInit] = useState(true);
+  const [pageState, setPageState] = useState<PageState>(PageState.INIT);
 
   return (
     <main className="relative">
-      <AnimatePresence mode="wait">
-        {init && (
-          <div>
-            <InitPage
-              setInit={setInit}
-            />
-          </div>)
-        }
+      <AnimatePresence
+        mode="wait"
+        onExitComplete={() => {
+          setPageState(PageState.MAIN);
+        }}
+      >
+        {pageState == PageState.INIT && (
+          <InitPage setPageState={setPageState} />
+        )}
+        {pageState == PageState.MAIN && <MainPage />}
       </AnimatePresence>
-      {!init && (
-        <MainPage />
-      )}
     </main>
   );
 };

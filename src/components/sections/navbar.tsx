@@ -8,9 +8,10 @@ export interface Props {
 const navbar = ({ scaleX }: Props) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{
         opacity: 1,
+        y: 0,
       }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
       className="w-full h-20 z-50 sticky top-0 backdrop-blur-lg"

@@ -1,23 +1,57 @@
-
+import * as faBrands from "@styled-icons/fa-brands";
+import * as simpleIcons from "@styled-icons/simple-icons";
 import { motion } from "framer-motion";
+import { PageState } from "../../App";
+import { shuffleArray } from "../../lib/utils";
 
+type Icons = typeof simpleIcons.Typescript;
+
+const _col = 4;
+
+const techHighLight = (() => {
+  const a: Icons[][] = [];
+  const _ = shuffleArray([
+    simpleIcons.Typescript,
+    simpleIcons.ReactLogo,
+    simpleIcons.Tailwindcss,
+    simpleIcons.Cplusplus,
+    simpleIcons.Qt,
+    simpleIcons.Csharp,
+    simpleIcons.Dotnet,
+    simpleIcons.Nuget,
+    simpleIcons.Redux,
+    simpleIcons.Tauri,
+    faBrands.Rust,
+    faBrands.Android,
+  ]);
+  const _row = _.length / _col;
+
+  for (let i = 0; i < _col; i++) {
+    a.push(_.slice(i * _row, i * _row + _row));
+  }
+  console.log(a);
+  return a;
+})();
 
 export interface Props {
-  setInit: React.Dispatch<React.SetStateAction<boolean>>;
+  setPageState: React.Dispatch<React.SetStateAction<PageState>>;
   closeDelay?: number;
 }
-// TODO: better format
+
+const _transition = {
+  staggerChildren: 0.35,
+};
+
 const containerVariants = {
   show: {
     transition: {
-      staggerChildren: 0.35,
       delayChildren: 0.75,
+      ..._transition,
+      delay: 0.5,
     },
   },
   exit: {
-    transition: {
-      staggerChildren: 0.35,
-    },
+    transition: _transition,
   },
 };
 
@@ -41,16 +75,19 @@ const bannerVariants = {
   },
 };
 
-const bannerTitleVariants = {
-  hidden: { opacity: 0, y: -25 },
+const bannerIconsVariants = {
+  hidden: { opacity: 0, y: -50 },
   show: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 1.3, delay: 2 + index * 0.5 },
+    transition: {
+      duration: 1.3,
+      delay: 1.8 + index * 0.55,
+    },
   }),
 };
 
-const LoadingBanner = ({ setInit, closeDelay }: Props) => {
+const LoadingBanner = ({ setPageState, closeDelay }: Props) => {
   return (
     <motion.div
       variants={containerVariants}
@@ -59,27 +96,31 @@ const LoadingBanner = ({ setInit, closeDelay }: Props) => {
       exit="exit"
       onAnimationComplete={() => {
         setTimeout(() => {
-          setInit(false);
-        }, closeDelay ?? 200);
+          setPageState(PageState.INIT_EXITING);
+        }, closeDelay ?? 1000);
       }}
       className="w-full flex h-screen z-[60] overflow-hidden"
     >
-      {[].map((Logo, index) => (
+      {techHighLight.map((row, index) => (
         <motion.div
           key={index}
           variants={bannerVariants}
-          className="h-full w-1/5 backdrop-blur-sm justify-center flex flex-col items-center"
+          className="h-full w-1/4 backdrop-blur-sm grid place-items-center"
         >
-          {/* <Logo className="px-5" /> */}
-          <motion.p
-            custom={index}
-            variants={bannerTitleVariants}
-            initial="hidden"
-            animate="show"
-            className="text-xl"
-          >
-            short desc
-          </motion.p>
+          <motion.div className="h-4/5 w-full grid grid-cols-1 gap-8">
+            {row.map((Logo, i) => (
+              <motion.div
+                custom={index + i}
+                className="h-1/3 w-1/3 grid m-auto"
+                variants={bannerIconsVariants}
+                initial="hidden"
+                animate="show"
+                key={`l${i}`}
+              >
+                <Logo className="m-auto" />
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
       ))}
     </motion.div>
