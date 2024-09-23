@@ -11,9 +11,18 @@ const Hero = () => {
           zIndex: -1, // Ensure it stays behind the content
           height: "100vh",
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ delay: 0.3, duration: 2 }}
+        initial={{
+          opacity: 0,
+          clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+        }}
+        animate={{
+          opacity: 0.5,
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          transition: {
+            duration: 0.75,
+            ease: "easeInOut",
+          },
+        }}
       />
 
       {/* Content Div  */}

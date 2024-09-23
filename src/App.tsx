@@ -10,7 +10,7 @@ export enum PageState {
 }
 
 const App = () => {
-  const [pageState, setPageState] = useState<PageState>(PageState.MAIN);
+  const [pageState, setPageState] = useState<PageState>(PageState.INIT);
 
   return (
     <main className="relative">
