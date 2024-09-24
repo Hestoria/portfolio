@@ -79,9 +79,9 @@ const _data: Array<{ title: string; content: React.ReactNode }> = [
 
 const workExperience = () => {
   return (
-    <div id="works" className="w-full min-h-fit">
+    <section id="works">
       <Timeline data={_data} />
-    </div>
+    </section>
   );
 };
 
