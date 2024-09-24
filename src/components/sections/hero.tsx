@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div id="hero" className="h-screen">
+    <section id="hero" className="h-screen">
       {/* Background Image Div */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
@@ -38,7 +38,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

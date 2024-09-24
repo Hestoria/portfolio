@@ -14,6 +14,7 @@ const mainPage = () => {
       <Sections.Navbar scaleX={scaleX} />
       <Sections.Hero />
       <Sections.About />
+      <Sections.Skills />
       <Sections.WorkExperience />
       <Sections.Contact />
       <Sections.Footer />

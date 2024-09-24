@@ -7,7 +7,7 @@ export interface Props {
 
 const navbar = ({ scaleX }: Props) => {
   return (
-    <motion.div
+    <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{
         opacity: 1,
@@ -37,7 +37,7 @@ const navbar = ({ scaleX }: Props) => {
           style={{ scaleX }}
         />
       </div>
-    </motion.div>
+    </motion.nav>
   );
 };
 
