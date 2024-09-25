@@ -31,10 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Install pnpm
-        run: npm install -g pnpm 
-      
+        run: npm install -g pnpm
+
       - name: Cache pnpm dependencies
         uses: actions/cache@v4
         with:
@@ -44,10 +44,10 @@ jobs:
           key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnp
-            
+
       - name: Install dependencies
-        run: pnpm i --production
-        
+        run: pnpm i
+
       - name: Build project
         run: pnpm build
 
@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './dist'
+          path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
