@@ -15,7 +15,10 @@
     "@radix-ui/react-progress": "^1.1.0",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-toggle": "^1.1.0",
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.8",
     "@styled-icons/fa-brands": "^10.47.0",
+    "@styled-icons/ionicons-solid": "^10.46.0",
     "@styled-icons/simple-icons": "^10.46.0",
     "@tabler/icons-react": "^3.14.0",
     "class-variance-authority": "^0.7.0",
@@ -25,13 +28,15 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@types/node": "^22.5.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.168.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",

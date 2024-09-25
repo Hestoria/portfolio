@@ -1,79 +1,120 @@
 import { Timeline } from "@/components/ui/timeline";
-// import { LogoNpm as NpmLogo } from "@styled-icons/ionicons-solid/LogoNpm";
-// import { Typescript as TypescriptLogo } from "@styled-icons/simple-icons/Typescript"
-// import { ReactLogo } from "@styled-icons/simple-icons/ReactLogo"
-// import { Rust as RustLogo } from "@styled-icons/fa-brands"
-// import { Cplusplus as CppLogo } from "@styled-icons/simple-icons/Cplusplus"
-// TODO: add work exp
+import {
+  Android,
+  Bitbucket,
+  Docker,
+  Git,
+  Gitlab,
+  Npm,
+  Rust,
+} from "@styled-icons/fa-brands";
+import { Linux } from "@styled-icons/fa-brands/Linux";
+import {
+  Cplusplus,
+  Csharp,
+  Dotnet,
+  Electron,
+  Laravel,
+  Mysql,
+  Nuget,
+  Php,
+  Phpmyadmin,
+  Postgresql,
+  Qt,
+  ReactLogo,
+  Typescript,
+} from "@styled-icons/simple-icons";
+
+import WorkExperienceContext from "../contextCards/workExperienceContext";
+
 const _data: Array<{ title: string; content: React.ReactNode }> = [
   {
     title: "Jan 2023 - Present",
     content: (
-      <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-          Deployed 5 new components on Aceternity today
-        </p>
-        <div className="mb-8">
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Card grid component
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Startup template Aceternity
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Random file upload lol
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Himesh Reshammiya Music CD
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Salman Bhai Fan Club registrations open
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <img
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-        </div>
-      </div>
+      <WorkExperienceContext
+        companyName={"Felix Payment Systems"}
+        location={"Vancouver, BC, Canada"}
+        jobTitle={"Software Engineer"}
+        usedTechs={[
+          Cplusplus,
+          Qt,
+          Csharp,
+          Dotnet,
+          Nuget,
+          Typescript,
+          ReactLogo,
+          Npm,
+          Docker,
+          Linux,
+          Rust,
+          Android,
+          Bitbucket,
+        ]}
+        hightLights={[
+          "Developed Android app with tap-to-pay, enhancing transaction speed and user convenience.",
+          "Led Docker pipeline project for npm and Nuget packages, optimizing workflow and resource use.",
+          "Created client-facing SDK for web and mobile, simplifying client implementation and boosting adoption.",
+          "Built internal tools for library automation, improving team productivity and reducing manual tasks.",
+          "Integrated payment gateways, enhancing transaction security and user trust.",
+        ]}
+      />
     ),
   },
   {
     title: "Apr 2022 - Dec 2022",
-    content: <></>,
+    content: (
+      <WorkExperienceContext
+        companyName={"Goopter eCommerce Solutions"}
+        location={"Burnaby, BC, Canada"}
+        jobTitle={"Frontend Developer"}
+        usedTechs={[Typescript, ReactLogo, Npm, Docker, Electron, Postgresql]}
+        hightLights={[
+          "Boosted website performance by 40%, improving load times and user experience.",
+          "Developed web and desktop applications using TypeScript, React, Redux, and Electron.",
+          "Delivered robust and scalable solutions, ensuring high-quality user interfaces.",
+        ]}
+      />
+    ),
   },
   {
     title: "Jun 2020 - Jul 2021",
-    content: <></>,
+    content: (
+      <WorkExperienceContext
+        companyName={"A & A Ltd"}
+        location="Hong Kong"
+        jobTitle={"Web Developer"}
+        usedTechs={[
+          Laravel,
+          Php,
+          Phpmyadmin,
+          Mysql,
+          Typescript,
+          ReactLogo,
+          Gitlab,
+          Git,
+        ]}
+        hightLights={[
+          "Developed full-stack web app with LAMP stack, boosting user engagement and site performance by 40%.",
+          "Integrated RESTful APIs for secure online payments, ensuring efficient transactions.",
+          "Optimized CMS functionality, drastically improving content management efficiency and accuracy for streamlined operations.",
+        ]}
+      />
+    ),
   },
   {
     title: "Aug 2019 - May 2020",
-    content: <></>,
+    content: (
+      <WorkExperienceContext
+        companyName={"NEC Hong Kong Ltd"}
+        location="Hong Kong"
+        jobTitle={"Software Developer (Internship)"}
+        usedTechs={[Csharp, Dotnet, Nuget, Typescript, Gitlab, Git]}
+        hightLights={[
+          "Collaborated with the team to streamline installation processes, achieving measurable improvements.",
+          "Diagnosed and fixed technical problems using analytical skills, contributing to project success.",
+        ]}
+      />
+    ),
   },
 ];
 
