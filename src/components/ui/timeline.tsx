@@ -5,7 +5,7 @@ import { _flippingWords } from "../../lib/const";
 import { FlipWords } from "./flip-words";
 
 interface TimelineEntry {
-  title: string;
+  time: [string, string];
   content: React.ReactNode;
 }
 
@@ -59,14 +59,24 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 lg:left-3 w-10 rounded-full bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-800 border border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden lg:block text-xl lg:pl-20 lg:text-4xl font-bold text-neutral-500 font-mono">
-                {item.title}
-              </h3>
+              <div>
+                {item.time.map((item, index) => {
+                  return (
+                    <p
+                      id={`title${index}`}
+                      className="hidden lg:block text-xl lg:pl-20 lg:text-3xl font-bold text-neutral-500 font-mono"
+                    >
+                      {index > 0 && "-"}
+                      {item}
+                    </p>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="relative pl-20 pr-4 lg:pl-4 w-full">
               <h3 className="lg:hidden block text-2xl mb-4 text-left font-bold text-neutral-500">
-                {item.title}
+                {item.time.join(" - ")}
               </h3>
               {item.content}{" "}
             </div>

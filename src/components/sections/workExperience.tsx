@@ -27,9 +27,9 @@ import {
 
 import WorkExperienceContext from "../contextCards/workExperienceContext";
 
-const _data: Array<{ title: string; content: React.ReactNode }> = [
+const _data: Array<{ time: [string, string]; content: React.ReactNode }> = [
   {
-    title: "Jan 2023 - Present",
+    time: ["Jan 2023", "Present"],
     content: (
       <WorkExperienceContext
         companyName={"Felix Payment Systems"}
@@ -61,7 +61,7 @@ const _data: Array<{ title: string; content: React.ReactNode }> = [
     ),
   },
   {
-    title: "Apr 2022 - Dec 2022",
+    time: ["Apr 2022", "Dec 2022"],
     content: (
       <WorkExperienceContext
         companyName={"Goopter eCommerce Solutions"}
@@ -77,7 +77,7 @@ const _data: Array<{ title: string; content: React.ReactNode }> = [
     ),
   },
   {
-    title: "Jun 2020 - Jul 2021",
+    time: ["Jun 2020", "Jul 2021"],
     content: (
       <WorkExperienceContext
         companyName={"A & A Ltd"}
@@ -102,7 +102,7 @@ const _data: Array<{ title: string; content: React.ReactNode }> = [
     ),
   },
   {
-    title: "Aug 2019 - May 2020",
+    time: ["Aug 2019", "May 2020"],
     content: (
       <WorkExperienceContext
         companyName={"NEC Hong Kong Ltd"}
