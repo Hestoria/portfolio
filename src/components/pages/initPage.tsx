@@ -4,7 +4,7 @@ import LoadingBanner, {
 import { motion } from "framer-motion";
 
 interface Props extends LoadingProps {}
-
+// TODO: to be edited after 3js background is implemented
 const initPage = (props: Props) => {
   return (
     <motion.div
