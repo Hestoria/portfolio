@@ -1,5 +1,5 @@
 const footer = () => {
-  return <section>footer</section>;
+  return <section>@ 2024 Sam Lee All rights reserved</section>;
 };
 
 export default footer;

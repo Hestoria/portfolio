@@ -12,8 +12,8 @@ const mainPage = () => {
   return (
     <motion.div>
       <Sections.Navbar scaleX={scaleX} />
-      <Sections.Hero />
-      <Sections.About />
+      {/* <Sections.Hero /> */}
+      {/* <Sections.About /> */}
       <Sections.Skills />
       <Sections.WorkExperience />
       <Sections.Contact />

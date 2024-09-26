@@ -66,8 +66,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       id={`title${index}`}
                       className="hidden lg:block text-xl lg:pl-20 lg:text-3xl font-bold text-neutral-500 font-mono"
                     >
-                      {index > 0 && "-"}
                       {item}
+                      {index <= 0 && " -"}
                     </p>
                   );
                 })}
