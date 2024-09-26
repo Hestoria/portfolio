@@ -5,10 +5,10 @@ import {
   Docker,
   Git,
   Gitlab,
+  Linux,
   Npm,
   Rust,
 } from "@styled-icons/fa-brands";
-import { Linux } from "@styled-icons/fa-brands/Linux";
 import {
   Cplusplus,
   Csharp,

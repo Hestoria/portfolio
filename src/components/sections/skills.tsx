@@ -1,12 +1,19 @@
-import { forwardRef, useRef } from "react";
-import { cn } from "../../lib/utils";
+import SkillBackEnd from "../contextCards/skillBackEnd";
+import SkillDatabases from "../contextCards/skilldatabase";
+import SkillsFE from "../contextCards/skillFrontEnd";
+import SkillPL from "../contextCards/skillProgrammingLanguage";
+import SkillTool from "../contextCards/SkillTool";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 
+// TODO: add context for each skill card for details displays
 const skills = () => {
   return (
-    <section className="max-w-7xl mx-auto" id="Skills">
-      <div className="my-20">
-        <h2 className="text-3xl lg:text-6xl mb-4 text-white max-w-4xl font-bold">
+    <section
+      className="w-full bg-neutral-950 font-sans px-4 lg:px-10"
+      id="Skills"
+    >
+      <div className="mx-auto pt-20">
+        <h2 className="text-3xl lg:text-6xl my-4 text-white max-w-4xl font-bold">
           Skills
         </h2>
       </div>
@@ -17,7 +24,7 @@ const skills = () => {
             title={item.title}
             description={item.description}
             header={item.header}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+            className={item.className}
           />
         ))}
       </BentoGrid>
@@ -25,77 +32,56 @@ const skills = () => {
   );
 };
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
-
-const Circle = forwardRef<
-  HTMLDivElement,
-  { className?: string; children?: React.ReactNode }
->(({ className, children }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
-});
-Circle.displayName = "Circle";
-
-const DetaBaseSkeleton:React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  return(
-
-  <div ref={containerRef}>
-
-  </div>
-)}
-
-
 const items = [
   {
     title: "Programming Language",
-    description: "Explore the building blocks of software, from syntax to semantics, that power modern applications.",
-    header: <Skeleton />
-  },
-  {
-    title: "Frontend Development",
-    description: "Uncover the art and science behind creating dynamic and interactive user interfaces.",
-    header: <Skeleton />
+    description: "Languages: Rust, C++, JavaScript, TypeScript, C#, Java",
+    header: <SkillPL />,
+    className: "row-span-1 col-span-1",
+    context: <></>,
   },
   {
     title: "Backend Development",
-    description: "Dive deep into the server-side logic, architecture, and databases that support web applications.",
-    header: <Skeleton />
+    description: [
+      "Technologies: NestJS, .NET, Rust (Actix, Rokect), Spring Boot, Qt",
+      "Architectures: RESTful APIs, Tcp/IP, SFTP",
+    ],
+    header: <SkillBackEnd />,
+    className: "row-span-1 col-span-1",
+    context: <></>,
   },
   {
-    title: "API Development",
-    description: "Learn about designing robust, scalable interfaces that enable communication between systems.",
-    header: <Skeleton />
+    title: "Frontend Development",
+    description: [
+      "Frameworks/Libraries: React, Vue.js, NextJS.",
+      "Styling: Tailwind CSS, Sass, Styled Components.",
+      "Animation: Framer Motion, GSAP, Three.js for 3D Animations.",
+    ],
+    header: <SkillsFE />,
+    className: "md:row-span-2 col-span-1",
+    context: <></>,
+  },
+  {
+    title: "Tools & Version Control",
+    description: [
+      "Version Control: Git, GitHub, GitLab, Bitbucket.",
+      "Editors/IDEs: Visual Studio Code, Vim",
+    ],
+    header: <SkillTool />,
+    className: "md:row-span-2 md:col-span-2",
+    context: <></>,
   },
   {
     title: "Databases",
-    description: "Understand the importance of storing, managing, and retrieving structured data efficiently.",
-    header: <DetaBaseSkeleton />
+    description: [
+      "SQL Databases: MySQL, PostgreSQL",
+      "NoSQL Databases: MongoDB, Redis",
+      "ORMs: TypeORM, Prisma.",
+    ],
+    header: <SkillDatabases />,
+    className: "row-span-1 col-span-1",
+    context: <></>,
   },
-  {
-    title: "DevOps & Cloud",
-    description: "Explore how cloud computing and DevOps streamline software development and operations.",
-    header: <Skeleton />
-  },
-  {
-    title: "Testing",
-    description: "Discover how testing ensures software reliability, performance, and security across platforms.",
-    header: <Skeleton />
-  }
-
 ];
-
-
 
 export default skills;

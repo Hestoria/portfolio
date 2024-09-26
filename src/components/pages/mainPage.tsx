@@ -16,7 +16,7 @@ const mainPage = () => {
       {/* <Sections.About /> */}
       <Sections.Skills />
       <Sections.WorkExperience />
-      <Sections.Contact />
+      {/* <Sections.Contact /> */}
       <Sections.Footer />
     </motion.div>
   );

@@ -11,5 +11,5 @@ export default defineConfig({
     },
   },
   // for gh page
-  base: "portfolio/",
+  base: "/portfolio/",
 });

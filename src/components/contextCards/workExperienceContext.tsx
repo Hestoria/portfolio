@@ -1,5 +1,6 @@
 import { Docker as DockerLogo } from "@styled-icons/fa-brands";
 import { motion } from "framer-motion";
+import { useId } from "react";
 import BoxReveal from "../ui/box-reveal";
 import { CardSpotlight } from "../ui/card-spotlight";
 import Marquee from "../ui/marquee";
@@ -24,7 +25,11 @@ const workExperienceContext: React.FC<Props> = ({
   const _techStacksSectionDelay = 0.6 + hightLights.length * 0.1;
 
   return (
-    <CardSpotlight className="font-mono text-neutral-400">
+    <CardSpotlight
+      key={useId()}
+      id={useId()}
+      className="font-mono text-neutral-400"
+    >
       {/* job info section */}
       <BoxReveal>
         <p className="text-neutral-50 text-2xl md:text-3xl font-bold">
@@ -43,7 +48,7 @@ const workExperienceContext: React.FC<Props> = ({
       </BoxReveal>
 
       {/* job hight lights section */}
-      <div className="pt-8 ">
+      <div className="pt-8">
         <BoxReveal delay={0.5}>
           <p className="text-lg md:text-xl font-semibold pb-4 text-neutral-200 uppercase">
             hightLights:
@@ -51,8 +56,8 @@ const workExperienceContext: React.FC<Props> = ({
         </BoxReveal>
         {hightLights.map((h, i) => {
           return (
-            <BoxReveal delay={0.5 + 0.1 * (i + 1)}>
-              <div id={`highlight ${i}`}>- {h}</div>
+            <BoxReveal key={`highlight ${i}`} delay={0.5 + 0.1 * (i + 1)}>
+              <div>- {h}</div>
             </BoxReveal>
           );
         })}
@@ -75,6 +80,7 @@ const workExperienceContext: React.FC<Props> = ({
             return (
               <motion.div
                 id={`techs logo ${i}`}
+                key={`techs logo ${i}`}
                 className="h-14 w-14"
                 whileHover={{ scale: 1.3 }}
               >

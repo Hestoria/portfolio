@@ -28,7 +28,7 @@ export const BentoGridItem = ({
 }: {
   className?: string;
   title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
+  description?: string | React.ReactNode | string[];
   header?: React.ReactNode;
   icon?: React.ReactNode;
 }) => {
@@ -46,7 +46,11 @@ export const BentoGridItem = ({
           {title}
         </div>
         <div className="font-sans font-normal text-neutral-300">
-          {description}
+          {Array.isArray(description) ? (
+            description.map((d, i) => <p key={`desc${i}`}>{d}</p>)
+          ) : (
+            <p>{description}</p>
+          )}
         </div>
       </div>
     </div>
