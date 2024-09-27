@@ -44,7 +44,7 @@ const Hero = () => {
             </motion.span>
           </motion.p>
         </div>
-        <div className="sm:mt-26 mt-12 px-4 w-1/2">
+        <div className="sm:mt-26 mt-12 px-4 w-4/5 md:w-1/2">
           <motion.p  variants={_animateProps} className="text-center text-pretty xl:text-2xl md:text-xl sm:text-lg text-base font-mono">
           I'm a Software Engineer driven by curiosity and a passion for crafting elegant, efficient.
           </motion.p>
