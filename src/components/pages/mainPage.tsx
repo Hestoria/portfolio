@@ -10,9 +10,9 @@ const mainPage = () => {
   });
 
   return (
-    <motion.div>
+    <motion.div className="bg-dot-white/5">
       <Sections.Navbar scaleX={scaleX} />
-      {/* <Sections.Hero /> */}
+      <Sections.Hero />
       {/* <Sections.About /> */}
       <Sections.Skills />
       <Sections.WorkExperience />

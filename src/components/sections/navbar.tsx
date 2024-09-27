@@ -16,7 +16,7 @@ const navbar = ({ scaleX }: Props) => {
       transition={{ duration: 1.5, ease: "easeInOut" }}
       className="w-full h-20 z-50 fixed top-0 backdrop-blur-lg"
     >
-      <nav className="w-full h-20 items-center flex py-2 px-1 md:py-4 md:px-2 font-mono text-lg justify-between border-b-2 border-x-white-500">
+      <nav className="w-full h-14 md:h-20 items-center flex py-2 px-1 md:py-4 md:px-2 font-mono text-lg justify-between border-b-2 border-x-white-500">
         <div className="flex h-5 items-center space-x-4 ">
           <a href="/">Sam Lee</a>
           <Separator
@@ -26,9 +26,10 @@ const navbar = ({ scaleX }: Props) => {
           <span className="hidden sm:block">Software Engineer</span>
         </div>
         <div className="flex h-5 items-center space-x-4 ">
-          <a href="/#about">About</a>
-          <a href="/#works">Works</a>
-          <a href="/#contact">Contact</a>
+          {/* <a href="#about">About</a> */}
+          <a href="#Skills">Skills</a>
+          <a href="#works">Works</a>
+          {/* <a href=" #contact">Contact</a> */}
         </div>
       </nav>
       <div className="w-full h-2">

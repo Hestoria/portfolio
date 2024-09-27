@@ -72,7 +72,7 @@ const workExperienceContext: React.FC<Props> = ({
           </p>
         </BoxReveal>
         <Marquee
-          repeat={1}
+          repeat={3}
           pauseOnHover
           className="[--duration:15s] overflow-hidden max-w-xl justify-center items-center"
         >

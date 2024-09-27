@@ -18,7 +18,7 @@ const about = () => {
         >
           <div
             className="relative w-[25vw] h-[25vh] bg-cover object-cover"
-            style={{ backgroundImage: `url('bg2.jpg')` }}
+            style={{ backgroundImage: `url('1.webp')` }}
           ></div>
         </motion.div>
       </div>
