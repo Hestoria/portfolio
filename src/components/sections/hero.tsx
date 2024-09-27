@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section id="hero" className="h-screen">
       {/* Background Image Div */}
-      <motion.div className="absolute inset-0 bg-cover bg-center  h-screen px-4 z-[30]">
+      <motion.div className="absolute inset-0 bg-cover bg-center h-screen px-4 z-[30]">
         <Canvas>
           <OrbitControls
             enablePan={false}
@@ -35,7 +35,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Content Div  */}
-      <div className="absolute inset-0 w-full h-full flex items-center flex-col">
+      <div className="absolute w-full flex items-center flex-col">
         <div className="md:mt-48 sm:mt-52 mt-52 px-4 w-3/4">
           <p className="text-center text-pretty uppercase xl:text-3xl md:text-2xl sm:text-xl text-lg font-black text-white font-mono">
             Hello, I am Sam{" "}
