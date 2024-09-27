@@ -18,7 +18,7 @@ const navbar = ({ scaleX }: Props) => {
     >
       <nav className="w-full h-14 md:h-20 items-center flex py-2 px-1 md:py-4 md:px-2 font-mono text-lg justify-between border-b-2 border-x-white-500">
         <div className="flex h-5 items-center space-x-4 ">
-          <a href="/">Sam Lee</a>
+          <a href="#hero">Sam Lee</a>
           <Separator
             orientation="vertical"
             className="bg-white hidden sm:block"
