@@ -52,3 +52,11 @@ export default tseslint.config({
   },
 });
 ```
+
+```ts
+// About section list all the interested topics
+// 3 - 4(cat (if found a good model), car, AI, Coding) sections and 300vh for each
+// trigger animation on scroll
+// init div, 50 | 50 with model on left and right for description [ scroll = 0 ]
+//
+```

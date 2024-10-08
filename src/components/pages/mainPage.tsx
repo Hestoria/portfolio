@@ -13,7 +13,7 @@ const mainPage = () => {
     <motion.div className="bg-dot-white/5">
       <Sections.Navbar scaleX={scaleX} />
       <Sections.Hero />
-      {/* <Sections.About /> */}
+      <Sections.About />
       <Sections.Skills />
       <Sections.WorkExperience />
       {/* <Sections.Contact /> */}
