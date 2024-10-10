@@ -29,6 +29,9 @@ importers:
       '@react-three/fiber':
         specifier: ^8.17.8
         version: 8.17.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.168.0)
+      '@styled-icons/bootstrap':
+        specifier: ^10.46.0
+        version: 10.47.0(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@styled-icons/fa-brands':
         specifier: ^10.47.0
         version: 10.47.0(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -749,6 +752,12 @@ packages:
     resolution: {integrity: sha512-4fEwOjO95h0RuNrAYKXIAd1ZWTKUNN+PZwVBHGGdekfeHldP7l2V/iqKPGinMKv5g+KJjcJe9BD6ooBpS/EUJQ==}
     cpu: [x64]
     os: [win32]
+
+  '@styled-icons/bootstrap@10.47.0':
+    resolution: {integrity: sha512-xpnPdrLhAhpTRE4iljQIEK73twVj7VPglwHSL+8nQdH7EsW5RJIOWsmlkZMyqhQHN0H7fGmT10F3/6OQhSpfGg==}
+    peerDependencies:
+      react: '*'
+      styled-components: '*'
 
   '@styled-icons/fa-brands@10.47.0':
     resolution: {integrity: sha512-w+G31+61nBnjxzCwMs+H9rNm9jl+HhtRgZYvNd+2NKQn1dRbHbBVXzQEHCOL6hksvkDbIa0iPrenqMU6pB+wZQ==}
@@ -2691,6 +2700,13 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.22.3':
     optional: true
+
+  '@styled-icons/bootstrap@10.47.0(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+    dependencies:
+      '@babel/runtime': 7.25.6
+      '@styled-icons/styled-icon': 10.7.1(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      react: 18.3.1
+      styled-components: 6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@styled-icons/fa-brands@10.47.0(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:

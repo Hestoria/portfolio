@@ -35,8 +35,10 @@ const navbar = ({ scaleX }: Props) => {
           <span className="hidden sm:block">Software Engineer</span>
         </div>
         <div className="flex h-5 items-center space-x-4 ">
-          {/* <a href="#about">About</a> */}
-          <motion.a whileHover={_hoverAnimation} href="#Skills">
+          <motion.a whileHover={_hoverAnimation} href="#about">
+            About
+          </motion.a>
+          <motion.a whileHover={_hoverAnimation} href="#skills">
             Skills
           </motion.a>
           <motion.a whileHover={_hoverAnimation} href="#works">

@@ -21,6 +21,7 @@
     "@react-three/fiber": "^8.17.8",
     "@styled-icons/fa-brands": "^10.47.0",
     "@styled-icons/ionicons-solid": "^10.46.0",
+    "@styled-icons/bootstrap": "^10.46.0",
     "@styled-icons/simple-icons": "^10.46.0",
     "@tabler/icons-react": "^3.14.0",
     "class-variance-authority": "^0.7.0",

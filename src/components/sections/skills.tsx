@@ -10,7 +10,7 @@ const skills = () => {
   return (
     <section
       className="w-full bg-neutral-950 font-sans px-4 lg:px-10"
-      id="Skills"
+      id="skills"
     >
       <div className="max-w-7xl mx-auto pt-20">
         <h2 className="text-3xl lg:text-6xl my-4 text-white max-w-4xl font-bold">

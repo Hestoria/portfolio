@@ -1,44 +1,55 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { motion, MotionValue, useMotionValueEvent } from "framer-motion";
-import React, { ReactNode, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useRef, useState } from "react";
+
+const _animateProps = {
+  hidden: { opacity: 0, y: -50 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 type Card = {
   id: number;
   content: JSX.Element | React.ReactNode | string;
   className: string;
-  thumbnail: ReactNode;
+  thumbnail: string;
 };
 
 export const LayoutGrid = ({
   cards,
-  s,
-}: {
+}: // s,
+{
   cards: Card[];
-  s: MotionValue<number>;
+  // s: MotionValue<number>;
 }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
-  const [cop, setCop] = useState<boolean>(true);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true }); // Trigger the animation only once
 
-  useMotionValueEvent(s, "change", (v) => {
-    // if (v == 1) {
-    //   setCop(false);
-    // } else if (v == 5.5) {
-    //   setCop(true);
-    // }
-    // if (v >= 5.5 || v < 2) {
-    //   handleOutsideClick();
-    // } else if (v >= 5) {
-    //   handleClick(cards[3]);
-    // } else if (v >= 4) {
-    //   handleClick(cards[2]);
-    // } else if (v >= 3) {
-    //   handleClick(cards[1]);
-    // } else if (v >= 2) {
-    //   handleClick(cards[0]);
-    // }
-  });
+  // const [cop, setCop] = useState<boolean>(true);
+
+  // useMotionValueEvent(s, "change", (v) => {
+  //   if (v == 1) {
+  //     setCop(false);
+  //   } else if (v == 5.5) {
+  //     setCop(true);
+  //   }
+  //   if (v >= 5.5 || v < 2) {
+  //     handleOutsideClick();
+  //   } else if (v >= 5) {
+  //     handleClick(cards[3]);
+  //   } else if (v >= 4) {
+  //     handleClick(cards[2]);
+  //   } else if (v >= 3) {
+  //     handleClick(cards[1]);
+  //   } else if (v >= 2) {
+  //     handleClick(cards[0]);
+  //   }
+  // });
 
   const handleClick = (card: Card) => {
     setLastSelected(selected);
@@ -51,14 +62,29 @@ export const LayoutGrid = ({
   };
 
   return (
-    <motion.div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
+    <motion.div
+      ref={ref}
+      initial={"hidden"}
+      animate={inView ? "show" : "hidden"}
+      variants={{
+        show: {
+          transition: {
+            staggerChildren: 0.3,
+            duration: 1.5,
+            ease: "easeInOut",
+          },
+        },
+      }}
+      className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative"
+    >
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+        <div key={i} className={cn(card.className)}>
           <motion.div
+            variants={_animateProps}
             onClick={() => {
-              if (cop) {
-                handleClick(card);
-              }
+              handleClick(card);
+              // if (cop) {
+              // }
             }}
             className={cn(
               card.className,
@@ -78,9 +104,7 @@ export const LayoutGrid = ({
       ))}
       <motion.div
         onClick={() => {
-          if (cop) {
-            handleOutsideClick();
-          }
+          handleOutsideClick();
         }}
         className={cn(
           "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
@@ -93,7 +117,13 @@ export const LayoutGrid = ({
 };
 
 const ImageComponent = ({ card }: { card: Card }) => {
-  return <motion.div>{card.thumbnail}</motion.div>;
+  return (
+    <motion.img
+      className="h-full w-full object-cover cursor-pointer"
+      src={card.thumbnail ?? ""}
+      alt={card.thumbnail}
+    />
+  );
 };
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {

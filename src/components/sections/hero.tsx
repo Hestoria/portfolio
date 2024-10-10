@@ -4,6 +4,7 @@ import {
   PerspectiveCamera,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { ArrowDownCircleFill } from "@styled-icons/bootstrap/ArrowDownCircleFill";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import CatModel from "../3d/cat";
@@ -93,7 +94,7 @@ const Hero = () => {
         </Suspense>
       </div>
 
-      {/* <motion.div
+      <motion.div
         transition={{
           duration: 10,
           ease: "easeInOut",
@@ -103,10 +104,16 @@ const Hero = () => {
         animate={{
           translateY: [0, 6, -3, 8, -2, 4, 0],
         }}
-        className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-6 "
+        className="absolute inset-0 size-20 mx-auto mt-auto bottom-6 cursor-pointer"
+        // onClick={() => {}}
       >
-        Start Scrolling
-      </motion.div> */}
+        <p className="text-orange-300 font-mono text-center font-bold">
+          Start Scrolling
+        </p>
+        <div className="flex justify-center">
+          <ArrowDownCircleFill className="size-8 mt-2" />
+        </div>
+      </motion.div>
     </section>
   );
 };
