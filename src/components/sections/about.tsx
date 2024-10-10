@@ -28,7 +28,7 @@ const about = () => {
       <h2 className="text-3xl lg:text-6xl mb-4 lg:px-10 text-white font-bold max-w-7xl px-4">
         About Me
       </h2>
-      <div ref={ref} className="relative h-screen">
+      <div ref={ref} className="relative md:h-screen">
         <p className="w-full uppercase text-center py-8 md:text-3xl text-xl font-bold font-mono">
           I am always interested in ...
         </p>
