@@ -32,7 +32,7 @@ const about = () => {
         <p className="w-full uppercase text-center py-8 md:text-3xl text-xl font-bold font-mono">
           I am always interested in ...
         </p>
-        <div className="md:h-screen pt-20 md:py-20 w-full top-0 md:sticky">
+        <div className="md:h-screen py-4 w-full top-0 md:sticky">
           <LayoutGrid cards={cards} />
         </div>
       </div>
@@ -45,7 +45,7 @@ export default about;
 const CarDream = () => {
   return (
     <div className="p-4 h-full w-full">
-      <p className="font-bold md:text-4xl text-xl text-white">
+      <p className="font-block md:text-4xl text-xl font-mono text-white my-4">
         Driving the Dream
       </p>
       <div className="flex-grow h-4/5 w-full">
@@ -65,7 +65,7 @@ const CarDream = () => {
           </Canvas>
         </Suspense>
       </div>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="text-base my-4 max-w-lg text-neutral-200 font-bold">
         Experience the thrill of the open road with a car that combines power,
         performance, and style. Every drive becomes a journey of excitement and
         freedom.
@@ -76,8 +76,8 @@ const CarDream = () => {
 
 const BadmintonBliss = () => {
   return (
-    <div className="p-4 h-full w-full flex flex-col">
-      <p className="font-bold md:text-4xl text-xl text-white text-left">
+    <div className="p-4 h-full w-full flex flex-col justify-between">
+      <p className="font-block md:text-4xl text-xl font-mono text-white my-4">
         Smash on the Court
       </p>
       <div className="flex justify-center my-4 max-h-[60%]">
@@ -87,7 +87,7 @@ const BadmintonBliss = () => {
           className="max-w-full h-auto"
         />
       </div>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="text-base my-4 max-w-lg text-neutral-200 font-bold">
         A game of badminton is more than just sport—it’s strategy, agility, and
         the pure satisfaction of landing the perfect smash. Play your best, and
         the game is yours.
@@ -99,7 +99,9 @@ const BadmintonBliss = () => {
 const CatComfort = () => {
   return (
     <div className="p-4 h-full w-full">
-      <p className="font-bold md:text-4xl text-xl text-white">Cat in Comfort</p>
+      <p className="font-block md:text-4xl text-xl font-mono text-white my-4">
+        Cat in Comfort
+      </p>
       <div className="flex-grow h-4/5 w-full">
         <Suspense
           fallback={<div className="w-full h-full text-center">Loading...</div>}
@@ -121,7 +123,7 @@ const CatComfort = () => {
           </Canvas>
         </Suspense>
       </div>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="text-base my-4 max-w-lg text-neutral-200 font-bold">
         Whether it’s lounging in the sun or exploring every corner of the house,
         this cat knows how to live life with a perfect mix of curiosity and
         calm.
@@ -133,7 +135,7 @@ const CatComfort = () => {
 const CodingCalm = () => {
   return (
     <div className="p-4 h-full w-full">
-      <p className="font-bold md:text-4xl text-xl text-white">
+      <p className="font-block md:text-4xl text-xl font-mono text-white my-4">
         Coding Serenity
       </p>
       <div className="flex-grow h-4/5 w-full">
@@ -161,7 +163,7 @@ const CodingCalm = () => {
           </Canvas>
         </Suspense>
       </div>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="text-base my-4 max-w-lg text-neutral-200 font-bold">
         In the world of code, logic and creativity blend seamlessly. Whether
         debugging or building, there’s a unique calm that comes from seeing your
         ideas take shape, one line at a time.

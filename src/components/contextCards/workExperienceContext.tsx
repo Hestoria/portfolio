@@ -74,7 +74,7 @@ const workExperienceContext: React.FC<Props> = ({
         <Marquee
           repeat={3}
           pauseOnHover
-          className="[--duration:15s] overflow-hidden max-w-xl justify-center items-center"
+          className="[--duration:15s] overflow-hidden max-full justify-center items-center"
         >
           {usedTechs.map((T, i) => {
             return (

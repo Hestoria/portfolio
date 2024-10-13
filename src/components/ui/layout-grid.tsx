@@ -82,7 +82,11 @@ export const LayoutGrid = ({
           <motion.div
             variants={_animateProps}
             onClick={() => {
-              handleClick(card);
+              if (!selected) {
+                handleClick(card);
+              } else {
+                handleOutsideClick();
+              }
               // if (cop) {
               // }
             }}
@@ -90,7 +94,7 @@ export const LayoutGrid = ({
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-3/4 w-full md:w-3/4 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                ? "rounded-lg cursor-pointer absolute inset-0 h-full md:h-3/4 w-full md:w-3/4 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
                 ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
