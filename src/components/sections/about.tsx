@@ -6,7 +6,7 @@ import { Suspense, useRef } from "react";
 import Badminton from "../../assets/badminton.webp";
 import BS from "../../assets/badmintonsmash.webp";
 import Cat from "../../assets/cats.webp";
-import Coding from "../../assets/coding.jpg";
+import Coding from "../../assets/coding.webp";
 import GT3 from "../../assets/gt3.webp";
 import CarModel from "../3d/car";
 import CatsModel from "../3d/cats";
@@ -25,9 +25,11 @@ const about = () => {
 
   return (
     <section id="about" className="">
-      <h2 className="text-3xl lg:text-6xl mb-4 lg:px-10 text-white font-bold max-w-7xl px-4">
-        About Me
-      </h2>
+      <div className="max-w-7xl mx-auto pt-32">
+        <h2 className="text-3xl lg:text-6xl my-4 text-white max-w-4xl font-bold">
+          About Me
+        </h2>
+      </div>
       <div ref={ref} className="relative md:h-screen">
         <p className="w-full uppercase text-center py-8 md:text-3xl text-xl font-bold font-mono">
           I am always interested in ...

@@ -29,7 +29,7 @@ const footer = () => {
             );
           })}
         </div>
-        <p className="font-mono text-sm text-gray-600 w-full text-center font-black">
+        <p className="font-mono text-sm text-gray-600 w-full pt-4 pb-8 text-center font-black">
           @ 2024 Sam Lee All rights reserved
         </p>
       </div>
